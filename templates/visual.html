@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Make it compatible with mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction</title>
+    <style>
+        body {
+            background-color: #f2f2f2; /* Light gray background */
+            font-family: Arial, sans-serif; /* Use a common sans-serif font */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333; /* Dark gray background for navbar */
+            padding: 10px 20px; /* Add some padding */
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 24px; /* Increase font size */
+            color: #fff; /* White logo text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .navbar-brand img {
+            width: 40px; /* Set width for logo image */
+            height: 40px; /* Set height for logo image */
+            margin-right: 10px; /* Add space between logo image and text */
+        }
+
+        .navbar-text {
+            font-size: 18px; /* Set font size */
+            color: #fff; /* White text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .navbar-text:hover {
+            color: #ddd; /* Light gray color on hover */
+        }
+
+        .login {
+            width: 300px; /* Set width for the form container */
+            margin: 50px auto; /* Center the form horizontally */
+            background-color: #fff; /* White background for the form */
+            padding: 20px; /* Add some padding */
+            border-radius: 5px; /* Add rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        .login h1 {
+            text-align: center; /* Center the heading */
+            color: #8e44ad; /* Purple heading color */
+        }
+
+        input[type="text"] {
+            width: 100%; /* Full width text fields */
+            padding: 10px; /* Add some padding */
+            margin-bottom: 10px; /* Add space between text fields */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            border: 1px solid #ccc; /* Add a border */
+            border-radius: 3px; /* Add rounded corners */
+        }
+
+        button {
+            width: 100%; /* Full width button */
+            padding: 10px; /* Add some padding */
+            background-color: #8e44ad; /* Purple button background */
+            color: #fff; /* White button text color */
+            border: none; /* Remove default button border */
+            border-radius: 3px; /* Add rounded corners */
+            cursor: pointer; /* Add cursor pointer on hover */
+            transition: background-color 0.3s ease; /* Add smooth transition */
+        }
+
+        button:hover {
+            background-color: #6c3483; /* Darker purple background on hover */
+        }
+
+        h4 {
+            text-align: center; /* Center the prediction text */
+            color: #8e44ad; /* Purple prediction text color */
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Increased min-width */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            min-height: 400px; /* Increased minimum height */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-gallery h2 {
+            text-align: center;
+            color: #8e44ad;
+        }
+        .navbar-links {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-links > a {
+            margin: 0 10px; /* Add margin between links */
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='wine-glass.png') }}" alt="Logo" width="40" height="40">
+         Wine Quality Prediction
+    </a>
+    <div class="navbar-links">
+        <a class="navbar-text" href="{{ url_for('home') }}">Home</a>
+        <a class="navbar-text" href="{{ url_for('visual') }}">Visual</a>
+        <a class="navbar-text" href="{{ url_for('testing') }}">Test</a>
+        <a class="navbar-text" href="{{ url_for('about') }}">Team</a>
+    </div>
+</div>
+
+<div class="image-gallery">
+    <div>
+        <img src="{{ url_for('static', filename='Figure_1.png') }}" alt="Image 1">
+        <h2>Histograms of All Features</h2>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='Figure_2.png') }}" alt="Image 2">
+        <h2>Box Plots of All Features</h2>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='Figure_3.png') }}" alt="Image 3">
+        <h2>Correlation Matrix</h2>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='Figure_4.png') }}" alt="Image 4">
+        <h2>Scatter Plot Matrix</h2>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='Figure_5.png') }}" alt="Image 5">
+        <h2>True vs Predicted Quality</h2>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='Figure_6.png') }}" alt="Image 6">
+        <h2>Learning Curves</h2>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='Figure_7.png') }}" alt="Image 7">
+        <h2>Confusion Matrix</h2>
+    </div>
+</div>
+
+<div class="footer">
+    <p1>Contact Us: contact@215188@aack.au.edu.pk</p1>
+</div>
+</body>
+</html>

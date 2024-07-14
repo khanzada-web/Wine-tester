@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Make it compatible with mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction</title>
+    <style>
+        body {
+            background-color: #f2f2f2; /* Light gray background */
+            font-family: Arial, sans-serif; /* Use a common sans-serif font */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333; /* Dark gray background for navbar */
+            padding: 10px 20px; /* Add some padding */
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 24px; /* Increase font size */
+            color: #fff; /* White logo text color */
+            text-decoration: none; /* Remove underline */
+        }
+        
+        .navbar-brand img {
+            width: 40px; /* Set width for logo image */
+            height: 40px; /* Set height for logo image */
+            margin-right: 10px; /* Add space between logo image and text */
+        }
+        
+        .navbar-text {
+            font-size: 18px; /* Set font size */
+            color: #fff; /* White text color */
+            text-decoration: none; /* Remove underline */
+            margin: 0 10px; /* Add margin between links */
+        }
+
+        .navbar-text:hover {
+            color: #ddd; /* Light gray color on hover */
+        }
+
+        .main-banner {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('{{ url_for('static', filename='Wines-Banner.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #8e44ad;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #6c3483;
+        }
+        
+        .feature-highlights {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+        
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f2f2f2;
+        }
+        
+        .testimonial {
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-author {
+            font-style: italic;
+            color: #777;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        h1, p {
+            color: black;
+        }
+        .navbar-links {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-links > a {
+            margin: 0 10px; /* Add margin between links */
+        }
+    </style>
+</head>
+<body>
+ <div class="navbar">
+     <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='wine-glass.png') }}" alt="Logo" width="40" height="40">
+        Wine Quality Prediction
+     </a>
+     <div class="navbar-links">
+        <a class="navbar-text" href="{{ url_for('home') }}">Home</a>
+        <a class="navbar-text" href="{{ url_for('visual') }}">Visual</a>
+        <a class="navbar-text" href="{{ url_for('testing') }}">Test</a>
+        <a class="navbar-text" href="{{ url_for('about') }}">Team</a>
+     </div>
+ </div>
+    
+
+ <div class="main-banner">
+    <h1>Unlock the Secrets of Wine Quality</h1>
+    <p>Discover Your Perfect Vintage</p>
+    <a class="cta-button" href="{{ url_for('testing') }}">Test Your Wine Quality</a>
+    <br>
+    <br>
+    <br>
+    <a class="cta-button" href="{{ url_for('visual') }}">Visualization</a>
+</div>
+
+
+<div class="feature-highlights">
+    <h2>Key Features</h2>
+    <div class="feature-icon">&#127863;</div>
+    <p>Accurate Predictive Analytics</p>
+    <div class="feature-icon">&#127863;</div>
+    <p>User-Friendly Interface</p>
+</div>
+
+<div class="testimonial-section">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial">
+        <p>"This app helped me choose the perfect wine for my dinner party!"</p>
+        <p class="testimonial-author">- Emily S.</p>
+    </div>
+    <div class="testimonial">
+        <p>"I'm amazed by the accuracy of the wine quality predictions!"</p>
+        <p class="testimonial-author">- John D.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <p1>Contact Us: contact@215188@aack.au.edu.pk</p1>
+    
+</div>
+
+</body>
+</html>

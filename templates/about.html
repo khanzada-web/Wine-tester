@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Make it compatible with mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction - About Us</title>
+    <style>
+        body {
+            background-color: #f2f2f2; /* Light gray background */
+            font-family: Arial, sans-serif; /* Use a common sans-serif font */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333; /* Dark gray background for navbar */
+            padding: 10px 20px; /* Add some padding */
+        }
+        
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 24px; /* Increase font size */
+            color: #fff; /* White logo text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .navbar-brand img {
+            width: 40px; /* Set width for logo image */
+            height: 40px; /* Set height for logo image */
+            margin-right: 10px; /* Add space between logo image and text */
+        }
+
+        .navbar-text {
+            font-size: 18px; /* Set font size */
+            color: #fff; /* White text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .navbar-text:hover {
+            color: #ddd; /* Light gray color on hover */
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: #fff; /* White background for main content */
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff; /* White background for cards */
+            border-radius: 5px; /* Add rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+            margin: 20px; /* Add margin */
+            overflow: hidden; /* Clip content */
+            width: 300px; /* Fixed width for cards */
+        }
+
+        .card-img-top {
+            width: 150px; /* Set width for image */
+            height: 150px; /* Set height for image */
+            border-radius: 50%; /* Circular image */
+            display: block; /* Ensure the image is a block element */
+            margin: 20px auto; /* Center the image */
+        }
+
+        .card-body {
+            padding: 20px; /* Add padding */
+            text-align: center; /* Center text */
+        }
+
+        .card-title {
+            font-size: 20px; /* Set font size */
+            color: #333; /* Dark gray color */
+            margin-bottom: 10px; /* Add bottom margin */
+        }
+
+        .card-text {
+            font-size: 16px; /* Set font size */
+            color: #777; /* Gray color */
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar-links {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-links > a {
+            margin: 0 10px; /* Add margin between links */
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">
+    <a class="navbar-brand" href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='wine-glass.png') }}" alt="Logo" width="40" height="40">
+        Wine Quality Prediction
+    </a>
+    <div class="navbar-links">
+        <a class="navbar-text" href="{{ url_for('home') }}">Home</a>
+        <a class="navbar-text" href="{{ url_for('visual') }}">Visual</a>
+        <a class="navbar-text" href="{{ url_for('testing') }}">Test</a>
+        <a class="navbar-text" href="{{ url_for('about') }}">Team</a>
+    </div>
+</div>
+
+<main>
+    <div class="card">
+        <img src="{{ url_for('static', filename='Mussawar.jfif') }}" class="card-img-top" alt="Mussawar Hayat">
+        <div class="card-body">
+            <h5 class="card-title">Mussawar Hayat</h5>
+            <p class="card-text">Meet Mussawar, the team lead and full-stack developer bringing a wealth of experience and expertise in crafting robust web solutions. With proficiency in Python, HTML, CSS, and JavaScript, he leads teams to develop dynamic and user-centric applications. His dedication to clean code and efficient development practices ensures projects are not only functional but also scalable and maintainable.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='Fatima.jfif') }}" class="card-img-top" alt="Ghulam Fatima">
+        <div class="card-body">
+            <h5 class="card-title">Ghulam Fatima</h5>
+            <p class="card-text">Meet Fatima, our esteemed Frontend Development expert. With a mastery of HTML, CSS, and React, Fatima is adept at transforming design concepts into captivating and responsive user interfaces. Her keen eye for detail ensures pixel-perfect implementations, while her proficiency in React empowers her to create dynamic and seamless web experiences.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='zain.jfif') }}" class="card-img-top" alt="Zain Ali Awan">
+        <div class="card-body">
+            <h5 class="card-title">Zain Ali Awan</h5>
+            <p class="card-text">Meet Zain, our Backend Specialist with a focus on Node.js. With a wealth of experience in backend development, Zain excels in leveraging the power of Node.js to build robust, scalable, and high-performance server-side applications. His expertise lies in architecting efficient backend systems, implementing RESTful APIs, and seamlessly integrating with databases and other services.</p>
+        </div>
+    </div>
+</main>
+
+<div class="footer">
+    <p1>Contact Us: contact@215188@aack.au.edu.pk</p1>
+</div>
+</body>
+</html>
